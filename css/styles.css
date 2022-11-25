@@ -22,6 +22,9 @@ html {
     --footer-mail-tel-color: rgba(255, 255, 255, 0.6);
     --background-team-item-color: #FFFFFF;
     --central-buttom-color: rgba(0, 0, 0, 0.15);
+    --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* визначення основних кольорів тексту та фону */ 
@@ -34,6 +37,13 @@ html {
   letter-spacing: 0.03em;
 }
 
+/*прибирання зазору у картинок знизу*/
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* прибирання крапочок в ненумерованих списках */
 /* прибирання автоматичного марджину в списках */
 .list {
@@ -42,7 +52,7 @@ html {
 
     list-style: none;
 }
-
+/*оформлення хедеру*/
 .container-header {
     display: flex;
     align-items: center;
@@ -147,18 +157,6 @@ html {
     color: var(--accent-color);
 }
 
-
-/* оформлення контейнеру */
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-
-    outline: 5px solid tomato;
-}
-
 /* оформлення героя */
 .hero {
     background: var(--background-hero-color);
@@ -202,22 +200,26 @@ html {
     background-color: var(--button-hover-color);
 }
 
-/*оформлення загального класу */
+/*оформлення загального класу*/
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-    background-color: azure;
 }
 
 .section-unique {
     padding-bottom: 94px;
-    background-color: #188CE8;
+
 }
 
-.portfolio-header-section {
-    margin-bottom: 94px;
-}
+/* оформлення загального контейнеру */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
 /* оформлення заголовків секцій, які є однаковими */
 .section-title {
     margin: 0;
@@ -242,6 +244,16 @@ html {
 }
 
 /* оформлення секціі Наші переваги */
+.features {
+    display: flex;
+}
+.features-examples {
+    margin-right: 30px;
+}
+
+.features-examples:nth-last-child(-n+1) {
+    margin-right: 0px;
+}
 .features-title {
     margin: 0;
     margin-bottom: 10px;
@@ -258,25 +270,45 @@ html {
     line-height: 1.71;
 }
 /* оформлення прикладів робіт */
+.work {
+    display: flex;
+}
 
+.work-image {
+    margin-right: 30px;
+}
+
+.work-image:nth-last-child(-n+1) {
+    margin-right: 0;
+}
 
 /* оформлення секціі Наша команда */
-.section-team{
+.section-team {
     padding-bottom: 94px;
+
     background-color: var(--rare-background-color);
+}
+.team {
+    display: flex;
 }
 
 .team-item {
     padding-bottom: 30px;
+    margin-right: 30px;
+
     background-color: var(--background-team-item-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--team-shadow);
     border-radius: 0px 0px 4px 4px;
+    text-align: center;
 }
 
+.team-item:nth-last-child(-n+1) {
+    margin-right: 0;
+}
 .team-name {
     margin: 0;
     margin-top: 30px;
-    margin-bottom: 10px;
+
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -284,6 +316,8 @@ html {
 }
 .team-position {
     margin: 0;
+    margin-top: 10px;   
+
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.18; 
@@ -298,7 +332,6 @@ html {
     background: var(--background-hero-color);
 }
 .footer-logo {
-    margin-bottom: 28px;
     color: var(--simple-white-text-color);
     text-decoration-line: none;
     font-family: Raleway, sans-serif;
@@ -310,7 +343,6 @@ html {
 .address {
     margin-top: 28px;
 }
-
 .address-list-beaute {
     margin-bottom: 12px;
 }
@@ -355,8 +387,15 @@ html {
 }
 
 /* оформлення Портфоліо */
+.filter {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
 .filter-button {
     display: inline-block;
+    margin-right: 8px;
     border-radius: 4px;
     padding: 6px 22px;
     border: 1px solid transparent;
@@ -377,10 +416,6 @@ html {
     color: var(--simple-white-text-color);
 }
 
-.filter {
-    margin-bottom: 50px;
-}
-
 .portfolio {
     background-color: var(--background-color);
 }
@@ -388,10 +423,15 @@ html {
 .portfolio-item {
     background-color: var(--background-color);
 }
-   
+
+.portfolio-link {
+    text-decoration-line: none;
+}
+
  .portfolio-caption {  
     margin: 0;
     margin-top: 20px;
+
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
@@ -401,12 +441,10 @@ html {
 .portfolio-catego {
     margin: 0;
     margin-top: 4px;
+
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
 }
 
-.portfolio-link {
-    text-decoration-line: none;
-}
 
