@@ -5,7 +5,7 @@ html {
 *,
 *::before
 *::after {
-    border-sizing: inherit
+    box-sizing: inherit;
 }
 
 :root {
@@ -21,11 +21,13 @@ html {
     --button-hover-color: #188CE8;
     --footer-mail-tel-color: rgba(255, 255, 255, 0.6);
     --background-team-item-color: #FFFFFF;
+    --central-buttom-color: rgba(0, 0, 0, 0.15);
 }
 
 /* визначення основних кольорів тексту та фону */ 
 .body {
   margin: 0;
+
   background-color: var(--background-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
@@ -37,12 +39,29 @@ html {
 .list {
     margin: 0;
     padding: 0;
+
     list-style: none;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
 }
 
 /* оформлення логотипу */
 .logo {
     display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+
     color: var(--simple-black-text-color);
     text-decoration-line: none;
     font-family: Raleway, sans-serif;
@@ -50,12 +69,87 @@ html {
     font-size: 26px;
     line-height: 1.19;
 }
+
 .logo-accent {
     color: var(--accent-color);
 }
 
-/* оформлення навігації */
-.container{
+.site-nav {
+    display: flex;
+}
+
+.site-nav-items {
+    margin-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+}
+.site-nav-items:nth-last-child(-n+1) {
+    margin-right: 0px;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    text-decoration-line: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-color);
+}
+
+.nav-link.current {
+    color: var(--accent-color);
+}
+
+.main-contacts {
+    display: flex;
+    align-items: center;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts-items {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 40px;
+    margin-left: auto;
+}
+
+.contacts-items:nth-last-child(-n+1) {
+    margin-right: 0px;
+}
+
+.contacts-link{
+    display: block;
+    color: var(--primary-text-color);
+    text-decoration-line: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--accent-color);
+}
+
+
+/* оформлення контейнеру */
+.container {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -65,49 +159,16 @@ html {
     outline: 5px solid tomato;
 }
 
-.nav-link{
-    display: inline-block;
-    color: var(--title-text-color);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-.nav-link:hover,
-.nav-link:focus{
-    color: var(--accent-color);
-}
-
-.nav-link.current{
-    color: var(--accent-color);
-}
-
-
-/* оформлення контактів */
-.contacts-link{
-    display: inline-block;
-    color: var(--primary-text-color);
-    text-decoration-line: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
-    color: var(--accent-color);
-}
-
 /* оформлення героя */
 .hero {
     background: var(--background-hero-color);
     text-align: center;
 }
+
 .hero-title {
     margin-top: 0;
     margin-bottom: 30px;
+
     color: var(--simple-white-text-color);
     font-weight: 900;
     font-size: 44px;
@@ -120,7 +181,7 @@ html {
 /* оформлення кнопки */
 .button {
     display: inline-block;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px var(--central-buttom-color);
     border-radius: 4px;
     padding: 10px 24px;
     border: 1px solid transparent;
