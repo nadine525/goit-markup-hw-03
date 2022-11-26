@@ -25,6 +25,8 @@ html {
     --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
+    --card-item-set: 30px;
+    --border-color-portfolio-item: #EEEEEE;
 }
 
 /* визначення основних кольорів тексту та фону */ 
@@ -387,9 +389,17 @@ img {
 }
 
 /* оформлення Портфоліо */
+.header-for-portfolio {
+    margin-bottom: 94px;
+}
+
+.real-examples {
+    margin-bottom: 94px;
+}
+
 .filter {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 34px;
     justify-content: center;
 }
 
@@ -417,11 +427,33 @@ img {
 }
 
 .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    flex-basis: calc(100% / 3 - 30px);
+
+    margin-top: -30px;
+    margin-left: -30px;
+
     background-color: var(--background-color);
 }
 
 .portfolio-item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+
     background-color: var(--background-color);
+
+    border: 1px solid var(--border-color-portfolio-item);
+}
+
+.portfolio-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.item-contetn {
+    padding: 20px 24px;
 }
 
 .portfolio-link {
@@ -430,7 +462,6 @@ img {
 
  .portfolio-caption {  
     margin: 0;
-    margin-top: 20px;
 
     color: var(--title-text-color);
     font-weight: 700;
@@ -438,6 +469,7 @@ img {
     line-height: 2;
     letter-spacing: 0.06em;
 }
+
 .portfolio-catego {
     margin: 0;
     margin-top: 4px;
@@ -446,5 +478,3 @@ img {
     font-size: 16px;
     line-height: 1.88;
 }
-
-
