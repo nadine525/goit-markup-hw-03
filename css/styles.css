@@ -431,26 +431,26 @@ img {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    flex-basis: calc(100% / 3 - 30px);
 
-    margin-top: -30px;
-    margin-left: -30px;
+    margin-top: calc( -1 * var(--card-item-set));
+    margin-left: calc(-1 * var(--card-item-set));
 
     background-color: var(--background-color);
 }
 
 .portfolio-item {
-    margin-right: 30px;
-    margin-bottom: 30px;
+    margin-right: var(--card-item-set);
+    margin-bottom: var(--card-item-set);
+    flex-basis: calc(100% / 3 - var(--card-item-set));
 
     background-color: var(--background-color);
 
     border: 1px solid var(--border-color-portfolio-item);
 }
 
-.portfolio-item:nth-child(3n) {
+/* .portfolio-item:nth-child(3n) {
     margin-right: 0;
-}
+} */
 
 .item-contetn {
     padding: 20px 24px;
