@@ -30,7 +30,7 @@ html {
 }
 
 /* визначення основних кольорів тексту та фону */ 
-.body {
+body {
   margin: 0;
 
   background-color: var(--background-color);
