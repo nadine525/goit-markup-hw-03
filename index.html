@@ -7,14 +7,13 @@
     <title>Студія</title> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css"/>
   </head>
   <body>
     <!--Шапка сторінки-->
     <header>
       <div class="container-header">
-        <nav>
-          <div class="main-nav">
+        <nav class="main-nav">
             <a href="./index.html" class="logo"><span class="logo-accent">Web</span>Studio</a>
                 <!--Навігація на інші сторінки-->
             <ul class="site-nav list">
@@ -22,15 +21,13 @@
               <li class="site-nav-items"><a href="./portfolio.html" class="nav-link">Портфоліо</a></li>
               <li class="site-nav-items"><a href="#" class="nav-link">Контакти</a></li>
             </ul>
-          </div>
         </nav> 
-            <!--Контакти-->
-          <div class="main-contacts">
-            <ul class="contacts list">
+
+              <!--Контакти-->
+        <ul class="contacts list">
               <li class="contacts-items"><a href="mailto:info@devstudio.com" class="contacts-link">info@devstudio.com</a></li>
               <li class="contacts-items"><a href="tel:+380961111111" class="contacts-link">+38 096 111 11 11</a></li>
-            </ul>     
-          </div>
+        </ul>     
       </div>
     </header>
 
@@ -93,26 +90,34 @@
             <li class="team-item">
                 <img src="./images/img-demiianenko.jpg" alt="Ігор"
                 width="270" height="260">
-                <h3 class="team-name">Ігор Дем'яненко</h3>
-                <p class="team-position" lang="en">Product Designer</p>
+                <div class="demianenko">
+                  <h3 class="team-name">Ігор Дем'яненко</h3>
+                  <p class="team-position" lang="en">Product Designer</p>                  
+                </div>
             </li>
             <li class="team-item">
                 <img src="./images/img-repina.jpg" alt="Ольга"
                 width="270" height="260">
-                <h3 class="team-name">Ольга Рєпіна</h3>
-                <p class="team-position" lang="en">Frontend Developer</p>   
+                <div class="repina">
+                  <h3 class="team-name">Ольга Рєпіна</h3>
+                  <p class="team-position" lang="en">Frontend Developer</p>                     
+                </div>
             </li>
             <li class="team-item">
                 <img src="./images/img-tarasov.jpg" alt="Миколай"
                 width="270" height="260">
-                <h3 class="team-name">Микола Тарасов</h3>
-                <p class="team-position" lang="en">Marketing</p>   
+                <div class="tarasov">
+                  <h3 class="team-name">Микола Тарасов</h3>
+                  <p class="team-position" lang="en">Marketing</p>                     
+                </div>
             </li>
             <li class="team-item">
                 <img src="./images/img-ermakov.jpg" alt="Михайло"
                 width="270" height="260">
-                <h3 class="team-name">Михайло Єрмаков</h3>
-                <p class="team-position" lang="en">UI Designer</p>   
+                <div class="ermakov">
+                  <h3 class="team-name">Михайло Єрмаков</h3>
+                  <p class="team-position" lang="en">UI Designer</p>                     
+                </div>
             </li>
         </ul>        
       </div>
