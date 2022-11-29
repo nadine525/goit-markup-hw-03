@@ -67,7 +67,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid var(--border-color-header); */
 }
 
 .main-nav {
@@ -258,7 +257,7 @@ img {
 }
 .features-examples {
     margin-right: 30px;
-    flex-basis: calc(100% - 3 * var(--card-item-set) / 4);
+    flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
 .features-examples:nth-last-child(-n+1) {
@@ -419,17 +418,11 @@ img {
 }
 
 /* оформлення Портфоліо */
-.header-for-portfolio {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-        
+.header-for-portfolio {        
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid var(--border-color-header);
+    border-bottom: 1px solid var(--border-color-header);
 }
 
 .examples {
@@ -445,6 +438,10 @@ img {
 
 .filter-beaute {
     margin-right: 8px;
+}
+
+.filter-beaute:last-child {
+    margin-right: 0;
 }
 
 .filter-button {
@@ -469,22 +466,16 @@ img {
 }
 
 .portfolio {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-
-
-    margin-top: calc( -1 * var(--card-item-set));
-    margin-right: calc( -1 * var(--card-item-set));
+    margin: 0;
+    gap: 30px;
 
     background-color: var(--background-color);
 }
 
 .portfolio-item {
-    margin-right: var(--card-item-set);
-    margin-bottom: var(--card-item-set);
-    flex-basis: calc(100% / 3 - var(--card-item-set));
+    flex-basis: calc((100% - 2 * 30px) / 3);
 
     background-color: var(--background-color);
 }
